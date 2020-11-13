@@ -4,7 +4,7 @@
 <%@ page contentType="text/htmL; charset=UTF-8" %> 
 <html>
 <head>
-	<title>스프링</title>
+	<title>뀨뀨</title>
 </head>
 <body>
 <h1>
