@@ -10,8 +10,8 @@
 <h1>
 	Hello world!  박상훈 입니다.
 </h1>
-<p> <c:out value="${serverTime}"></c:out>
-<P>  현재  서버의 시간은 ${serverTime} 입니다.. </P>
-<script>alert('메롱 ${servertime}');</script>
+<p> <c:out value="${TomcatserverTime}"></c:out>
+<P>  현재  서버의 시간은 ${TomcatserverTime} 입니다.. </P>
+<script>alert('메롱 ${TomcatserverTime}');</script>
 </body>
 </html>
