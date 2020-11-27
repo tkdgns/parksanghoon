@@ -46,6 +46,7 @@ margin-left:0px;
 .work-section li {
 float:left;/*세로배치를 가로배치로 변경*/
 width:50%;
+overflow:hidden;/*만약에 300px 높은 이미지는 숨김처리가 됩니다.*/
 }
 /*work영역 끝*/
 
