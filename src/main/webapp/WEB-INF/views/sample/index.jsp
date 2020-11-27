@@ -7,14 +7,8 @@
 - @page 골뱅이는 애노테이션발음 =페이지 지시자 랭귀지:java, 
 콘텐츠타입:text/html; 문자셋:유니코드 페이징인코딩:UTF-8
 자바주석 끝--%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>반응형 홈페이지</title>
-</head>
-<body>
-HomeController.java 에서 index.jsp로 매칭 시킨 결과가 나오는 페이지 입니다.<br>
+
+<!-- HomeController.java 에서 index.jsp로 매칭 시킨 결과가 나오는 페이지 입니다.<br>
 - HTML에서는 /resoureces/sample/index.html이렇게 접근합니다.<br>
 - jsp프로그램에서는 위 html처럼 바로접근 못하고 ,홈 컨트롤러자바를 거쳐서 index.jsp를 접근하는 이유는 보안떄문 입니다.<br>
 - 그래서 ,은행,관공서, 대학에서 대부분 사용합니다.(스프링을 배우는 목적)<br>
@@ -23,8 +17,44 @@ HomeController.java 에서 index.jsp로 매칭 시킨 결과가 나오는 페이
 - 자바에서 출발한 스프링 프레임워크는: 자바에서 웹프로그램 만드는데 특화된 라이브러리(프로그램묶음)를 구조화 시키는것<br>
 - 개발자가 편하게 만들어 놓은것이 스프링 프레임 워크.(현재 버전5. x 우리는 4.3.22버전 사용예정)<br>
 - 그러면, jsp는 뭐냐: 지금 보이는 프로젝트는 스프링 MVC프로젝트입니다.<br>
+- 여기서 MVC에서 View단에 해당하는 기술 부분이 jsp 입니다.<br>
 - MVC= Model(데이터베이스) - Viwe(jsp페이지) <->Controller(컨트롤러java클래스)<br>
 - org.edu.controller 패키지명:자바클래스가 있는 폴더 경로를 말합니다.<br>
-- 패키지를 사용하는 이유: 자바 클래스를 기능별로 묶어놓기 위해서 명시적으로 만든 묶음.<br>
-</body>
-</html>
+- 패키지를 사용하는 이유: 자바 클래스를 기능별로 묶어놓기 위해서 명시적으로 만든 묶음.<br> -->
+
+<%@ include file="./include/header.jsp" %>
+
+<section><!-- division디비전이라는 div 영역표시 태그 대신에 사용 -->
+<!-- 본문 슬라이드 영역 시작 -->
+<!-- 이미지를 불러오는 태그 img -->
+<!-- 경로:상대(./img),절대 경로(/resource/sample/img/...) -->
+<!-- 태그안쪽에 지정한 스타일을 인라인스타일 -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/resources/sample/img/dadada.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/resources/sample/img/lalala.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/resources/sample/img/x.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- 본문 슬라이드 영역 끝 -->
+</section><!-- division디비전이라는 영역표시 태그 -->
+<%@ include file="./include/footer.jsp" %>
