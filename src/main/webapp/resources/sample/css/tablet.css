@@ -16,7 +16,7 @@ margin-top:10px;
 }
 .header .gnb li {
 float:left;
-border:none;
+border:none;/*깃새로*/
 /*width:95px;*//*추가한 부분*/
 }
 .header .gnb li:last-child {border-bottom:none;}
