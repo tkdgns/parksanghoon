@@ -20,6 +20,7 @@
 <input name="phone" id="name" type="text" placeholder="000-0000-0000">
 <label for="phone">이메일</label> 
 <input name="email" type="text" placeholder="abc@abc.com">
+<!-- 입력 제약조건 htm15에서 지원하는 기능 type에 꼭 enall라고 형식을 지정해야하지만 제약조건 작동이됨 -->
 </div>
 <div class="textarea-class">
 <label for="message">메세지</label>
