@@ -27,6 +27,19 @@ public class HomeController {
 	 * 그래서, java 클래스는 수정 후 약간 기다린 후 Reloading.. 메시지 후 결과화인이 가능합니다.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String index() { //매서드(함수)의 리턴 (출력)형태지정 매서드명() {구현내용} string index() {}
+		//상단 리퀘스트매핑에서 지정한 경로로 접근을 하게 되면, 아래에 있는 index()메서드를 실행해라.
+		//메서드명 제일 앞에있는 public는 접근권한에 대한 키워드인데요, public(공공-다른 클래스에서 접근가능)
+		//, private(내부-현재 HomeController클래스에서만 접근가능)
+		//public String index(){ } 메서드 기본형태 
+		//$(document).ready(function(){}); j쿼리 기본형태
+		//리턴 반환값으로 사용한 String 클래스는 문자열을 반환하고, 여기서는 index.jsp와 매칭되는 문자열을 반환
+		//여기서는 index.jsp와 매칭되는 문자열을 반환. 상대경로가 필요합니다.
+		//스프링 MVC프로젝트에서 상대로의 최상위는 views폴더 최상위 root폴더입니다
+		// 접두사 (prefix), 접미사(suffix) index(접두사-파일명).jsp(접미사-확장자)
+		return "sample/index";//접두사만 반환값으로 넣습니다.
+	}
+	/*@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("환영합니다. 현재 여러분 컴퓨터 언어는 {}.입니다.", locale);
 		logger.info("한명합니다. 현재 여러분의 컴퓨터 언어는" + locale+" 입니다.. ");
@@ -43,6 +56,6 @@ public class HomeController {
 		System.out.println("현재서버의시간은" + formattedDate + "입니다.");
 		//위 mode1이라는 클래스형 변수를이용해서, severTime변수값을 아래 home (생략.Jsp)로 전송해
 		return "home";//결과적으로 return 출력값이 home(생략.jsp)에 연동됩니다.
-	}
+	}*/
 	
 }
