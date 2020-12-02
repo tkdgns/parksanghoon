@@ -3,7 +3,8 @@
 body {/*부트스트랩css또는 reset.css에서 초기화 된것을 재 정의 할때*/
 font-size:14px;
 background:#fff;
-line-height:1.4;/*상속 바로전에 적용한 값을 초기화inherit, initial*/
+line-height:1.4 !important;/*상속 바로전에 적용한 값을 초기화inherit, initial 시키는 역할*/
+font-family: "Nanum Gothic", "NanumGothic"!important;
 }/*부트스트랩css영향을 받은것을 무효화시키고, 사용자css로 적용*/
 /*부트스트랩css영향을 받는 부분을 무효화 시키기(아래)*/
 ul {
@@ -28,7 +29,7 @@ font-weight:normal;/*글자두께*/
 text-indent:-9999%;/*들여쓰기*/
 display:block;
 height:80px;
-background:url(/resources/sample/img/ms.png) no-repeat;/*배경이미지 기본이 반복repeat*/
+background:url(/resources/sample/img/fl.png) no-repeat;/*배경이미지 기본이 반복repeat*/
 background-size:90%;
 background-position:0px center;/*배경위치는 0px(가로) center(세로)*/
 }
@@ -78,10 +79,11 @@ color:#fff;
 /* 푸터영역 시작 */
 .footer {
 padding-top:30px;/*margin-top 작동을 하지 않아서 padding-top으로 변경*/
+background:#E8F5FF;
 }
 .footer p {
-margin: 21px 0px;
-color:#3f51b5;
+margin: 0px 0px;
+color:#14D3FF;
 text-align:center;/*문장내용을 가로 가운데 정렬*/
 }
 .float-clear {clear:both;}/*float 설정을 무력화 시키는 값, 줄바꿈 하는 역할이 됨*/
@@ -140,7 +142,7 @@ position:relative;/*a태그에서 위치를 상대위치로 지정*/
 /*마우스를 롤오버했을때 나오는 배경색상 before가상요소 영역(아래)*/
 .work-section li a::before {
 display:block;
-background:#3f51b5;
+background:#AAB9FF;
 /*이 절대값 위치는 위 a태그에서 지정한 relative상대위치에 한정해서 절대위치로 지정됨(아래)*/
 position:absolute;
 width:100%;
