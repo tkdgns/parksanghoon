@@ -16,7 +16,7 @@ public class AdminController {
 		//DB베이스 입력/출력/삭제/수정 처리 다음에...
 		return "redirect:/admin/member_list";//절대결로로 처리된 이후에 이동할 URL주소를 여기에 
 	}
-	
+
 	@RequestMapping(value="/admin/member_write",method=RequestMethod.GET)
 	public String member_write() {
 		return "admin/member/member_write";

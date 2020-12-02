@@ -42,6 +42,8 @@
 </div>
 <img src="/resources/sample/img/lalala.jpg" alt="겔러리게시판2이미지4">
 </a>
+
+
 </li>
 <li>
 <a href="javascript:;">
