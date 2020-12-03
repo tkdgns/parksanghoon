@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<!-- jstl 은 jsp 의 표준태그 라이브러리 입니다. java standard tag library -->  
 <%@ include file="../include/header.jsp" %>
 
   <!-- 대시보드 본문 Content Wrapper. Contains page content -->
@@ -21,14 +23,13 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
     <!-- 본문내용 Main content -->
     <section class="content">
       <div class="container-fluid">
-
+        
         <div class="row"><!-- 부트스트랩의 디자인 클래스 row -->
           <div class="col-12"><!-- 그리드시스템중 12가로칼럼 width:100% -->
-
+          
           <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">READ Member</h3>
@@ -36,7 +37,11 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <strong><i class="fas fa-book mr-1"></i> user_id</strong>
-                <p class="text-muted">admin</p>
+                <p class="text-muted">
+                <!-- jsp에서 자바변수(저장소)를 사용하는 방법 Model로 수신한 $ user_id2 변수명 으로 표시 -->
+                <%-- ${user_id2} 아래 보안코딩 적용 --%>
+                <c:out value="${user_id2}"></c:out>
+                </p>
 
                 <hr><!-- horizontal 수평선 태그 -->
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> user_name</strong>
@@ -45,27 +50,26 @@
                 <hr>
                 <strong><i class="fas fa-pencil-alt mr-1"></i> email</strong>
                 <p class="text-muted">admin@abc.com</p>
-
                 <hr>
                 <strong><i class="far fa-file-alt mr-1"></i> point</strong>
                 <p class="text-muted">100</p>
-
+                
                 <hr>
                 <strong><i class="fas fa-adjust mr-1"></i> enabled</strong>
                 <p class="text-muted">true</p>
-
+                
                 <hr>
                 <strong><i class="fas fa-layer-group mr-1"></i> levels</strong>
                 <p class="text-muted">ROLE_ADMIN</p>
               </div>
               <!-- /.card-body -->
             </div>
-
+          
           <!-- 버튼영역 시작 -->
             <div class="card-body">
-            	<a href="/admin/member_list" class="btn btn-primary float-right mr-1">LIST ALL</a>
-              	<button type="" class="btn btn-danger float-right mr-1">DELETE</button>
-				<button href="member_write.html" class="btn btn-warning float-right mr-1 text-white">UPDATE</button>>              	
+            	<a href="/admin/member/member_list" class="btn btn-primary float-right mr-1">LIST ALL</a>
+              	<button type="button" class="btn btn-danger float-right mr-1">DELETE</button>
+				<button type="button" class="btn btn-warning float-right mr-1 text-white">UPDATE</button>        	
               	<!-- 부트스트랩 디자인 버튼클래스를 이용해서 a태그를 버튼모양 만들기(위) -->
               	<!-- btn클래스명이 버튼모양으로 변경, btn-primary클래스명은 버튼색상을 변경하는역할 -->
               	<!-- 
@@ -77,14 +81,14 @@
               	 -->
               </div>
           <!-- 버튼영역 끝 -->
-
+          
           </div>
         </div>
-
+        
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-<%@ include file="../include/footer.jsp" %> 
+ 
+<%@ include file="../include/footer.jsp" %>

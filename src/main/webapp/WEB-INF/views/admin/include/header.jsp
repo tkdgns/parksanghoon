@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!-- 관리자단 헤더 시작 header.jsp -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -7,7 +8,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>관리자 | Dashboard</title>
-
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -31,7 +31,6 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- 관리자화면 최상단 아이콘2개 Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -40,7 +39,6 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
-
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -51,7 +49,6 @@
     </ul>
   </nav>
   <!-- /.navbar -->
-
   <!-- 관리자화면 왼쪽메뉴부분 Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- 관리자 상단로고 Brand Logo -->
@@ -59,7 +56,6 @@
       <img src="/resources/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Spring 프로젝트</span>
     </a>
-
     <!-- 왼쪽메뉴 Sidebar -->
     <div class="sidebar">
       <!-- 로그인한 사용자표시 Sidebar user panel (optional) -->
@@ -71,7 +67,6 @@
           <a href="#" class="d-block">관리자</a>
         </div>
       </div>
-
       <!-- 검색폼 SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -83,7 +78,6 @@
           </div>
         </div>
       </div>
-
       <!-- 사용자 홈과 대시보드 메뉴 Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -108,26 +102,25 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/admin/member_list" class="nav-link">
+                <a href="/admin/member/member_list" class="nav-link">
                 <!-- 위 메뉴선택시 활성화active 되는 것은 j쿼리로 만들예정입니다. -->
                   <i class="far fa-circle nav-icon"></i>
                   <p>관리자 관리</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/board_list" class="nav-link">
+                <a href="/admin/board/board_list" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>게시물 관리</p>
                 </a>
               </li>
             </ul>
           </li>
-
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
-<!-- 관리자단 헤더 끝 --> 
-
+<!-- 관리자단 헤더 끝 -->

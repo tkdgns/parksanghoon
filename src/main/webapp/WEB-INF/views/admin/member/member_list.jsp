@@ -25,7 +25,7 @@
     <!-- 본문내용 Main content -->
     <section class="content">
       <div class="container-fluid">
-
+        
         <div class="row"><!-- 부트스트랩의 디자인 클래스 row -->
           <div class="col-12"><!-- 그리드시스템중 12가로칼럼 width:100% -->
             <div class="card"><!-- 부트스트랩의 카드 클래스:네모난 디자인 -->
@@ -33,12 +33,12 @@
                 <h3 class="card-title">멤버 검색</h3>
 
                 <div class="card-tools">
-
-                  <form name="search_form" action="/admin/member_list" method="get">
+                  
+                  <form name="search_form" action="/admin/member/member_list" method="get">
                   <div class="input-group input-group-sm">
                     <!-- 부트스트랩 템플릿만으로는 디자인처리가 부족한 경우가 있기 때문에 종종 인라인 스타일 사용 -->
                     <div>
-                        <select name="search_type"class="form-control">
+                        <select name="search_type" class="form-control">
                             <option value="" selected>-전체-</option>
                             <option value="user_id" data-select2-id="8">ID</option>
                             <option value="user_name" data-select2-id="16">이름</option>
@@ -54,7 +54,7 @@
                     </div>
                   </div>
                   </form>
-
+                  
                 </div>
               </div>
               <!-- /.card-header -->
@@ -71,8 +71,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr onclick="javascript:location.href='/admin/member_view?user_id=admin';" style="cursor:pointer;">
-                      <td><a href="/admin/member_view?user_id=admin">admin</a></td>
+                    <tr onclick="javascript:location.href='/admin/member/member_view?user_id=admin';" style="cursor:pointer;">
+                      <td><a href="/admin/member/member_view?user_id=admin">admin</a></td>
                       <!-- 위에 a링크값은 리스트가 늘어날 수록 동적으로 user_id값이 변하게 됩니다. 개발자가 jsp처리 -->
                       <td>관리자</td>
                       <td>admin@abc.com</td>
@@ -82,7 +82,7 @@
                       <!-- 권한표시는 부트스트랩 뺏지 클래스 사용 -->
                     </tr>
                     <tr>
-                      <td><a href="/admin/member_view?user_id=user">user</a></td>
+                      <td><a href="/admin/member/member_view?user_id=user">user</a></td>
                       <td>사용자</td>
                       <td>user@abc.com</td>
                       <td>false</td>
@@ -93,13 +93,13 @@
                 </table>
               </div>
               <!-- /.card-body -->
-
+            
             </div>
             <!-- /.card -->
-
+            
             <!-- 버튼영역 시작 -->
               <div class="card-body">
-              	<a href="/admin/member_write" class="btn btn-primary float-right">CREATE</a>
+              	<a href="/admin/member/member_write" class="btn btn-primary float-right">CREATE</a>
               	<!-- 부트스트랩 디자인 버튼클래스를 이용해서 a태그를 버튼모양 만들기(위) -->
               	<!-- btn클래스명이 버튼모양으로 변경, btn-primary클래스명은 버튼색상을 변경하는역할 -->
               	<!-- 
@@ -111,7 +111,7 @@
               	 -->
               </div>
             <!-- 버튼영역 끝 -->
-
+              
             <!-- 페이징처리 시작 -->
             <div class="pagination justify-content-center">
             	<ul class="pagination">
@@ -129,15 +129,15 @@
             	 </ul>
             </div>
 	  		<!-- 페이징처리 끝 -->     
-
+            
           </div>
         </div>
-
+        
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  
 
 <%@ include file="../include/footer.jsp" %>
