@@ -26,6 +26,7 @@ public class ClassApp {
 		//development.dojob();
 		GraphicObject graphicObject = new Triangle();
 		graphicObject.draw();//클래스형 변수명을 지정할때, 카멜표기(낙타등)를 적용.
+		//더하기, 빼기 int sum =5 +3 ;
 	}
 
 }
@@ -41,8 +42,8 @@ abstract class GraphicObject {
 	//다른 해석하면, 책에서 목차만 있고 , 내용이 없는 구조.
 }
 class Triangle extends GraphicObject {
-	//메서드 오버라이드(메서드 이름이 같은것을 상속관계에서 실행)
-	@Override
+	//메서드 오버라이드(메서드 이름이 같은것을 상속관계에서 실행)=부모 메서드 재정의, 대표적인 다형성을 구현하는 것.
+	@Override//메서드 제정의
 	void draw() {
 		System.out.println(" *");
 		System.out.println(" * * ");

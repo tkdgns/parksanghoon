@@ -6,8 +6,8 @@ public class InterfaceApp {
 		// 자바프로그램은 항상 min() 진입점에서 실행하시는겁니다. 단, 앱프로그램은 해당없음..
 		AllCalc allCalc = new AllCalc();//실행 오브젝트 변수 allcalc 생성
 		allCalc.add(5, 5);
-		allCalc.sub(5, 5);
-		allCalc.mul(5, 5);
+		allCalc.sub(10, 10);//메서드를 호출할때, 5,5 / 10,10 이렇게 매개변수가 고정되지 않고,
+		allCalc.mul(5, 5);//동적으로 묶이는 방식을 동정바인딩이라고 함.
 		allCalc.div(5, 5);
 	}
 
